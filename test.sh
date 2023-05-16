@@ -4,70 +4,41 @@ set -e
 
 
 touch index.html
-echo "<!DOCTYPE html>
+echo "<!Doctype html>
 <html>
 <head>
-	<title> day2 </title>
+	<title>
+		this is just the beginning
+	</title>
 </head>
 
 <body>
 
-<!-- ordered list -->
+	<h2>check the font</h2>
+	<h3> check the font</h3>
 
-<ol>
-    <li> first line</li>
-    <li> second line </li>
-</ol>
-
-<!-- trying italic format -->
-
-<p> this is the example of <em> italic </em> format </p>
-
-<!-- trying bold -->
-
-<p> i am <b>muthu</b> </p>
-
-<!-- trying underline -->
-
-<p> the line <u> line</u> </p>
-
-<!-- Description list -->
-
-<dl>
-   <dt> about html </dt><br>
-   <dd> html is the website designing language </dd>
-</dl>
-
-<!-- abbreviation title -->
-
-<abbr title="bachelor of engineering">B.E</abbr>
-
-<!-- superscript -->
-
-<p> hellow good morning time is 7<sup>o</sup> clock </p> 
-
-<!-- subscript -->
-
-<p> chemical formula of water is H<sub>2</sub>O </p>
-
-<!-- time  need to know more -->
-
-<p> what date is today? <br>
-    today is  04 May 2023 </time> </p>
-    
-<!-- adding link to images -->
-
-<a href="https:www.google.com">
-<img src="nature.jpeg" alt="nature of the image"> </img> </a>
+</body>
 
 <p>
-<address>
-xxx
-xxx
-yyy
-yyy
-</address>
+ 
+  <a href="http:www.google.com/" title="do you want to enter google"/>google<a/>
+  <img src = "nature.jpeg">
+</p>
+</html>
 
+<ul>
+    <li>this is sample1</li>
+    <li>this is sample2</li>
+</ul>
+
+<ol>
+    <li>this is sample order list</li>
+    <li>this is sample order list</li>
+    <ul>
+    <li> inside order list </li>
+    </ul>
+<ol>
+</html>
     
      " > index.html
 
@@ -85,19 +56,17 @@ echo 'CMD ["nginx", "-g", "daemon off;"]' >> Dockerfile
 touch docker-compose.yml
 echo  'version: "3"' > docker-compose.yml
 echo  "services:"  >> docker-compose.yml
-echo  "  test5:"  >> docker-compose.yml
+echo  "  test6:"  >> docker-compose.yml
 echo  "    build:"    >> docker-compose.yml
 echo  "      context: ."  >> docker-compose.yml
 echo  "      dockerfile: Dockerfile"  >> docker-compose.yml
-echo  "    container_name: test4 "  >> docker-compose.yml
+echo  "    container_name: test5 "  >> docker-compose.yml
 echo  "    ports:"  >> docker-compose.yml
 echo  '      - "80:80"'  >> docker-compose.yml
 echo  "    volumes:"  >> docker-compose.yml
 echo  "      - ./:/var/www/html"  >> docker-compose.yml
 
 
-docker-compose up -d
-docker exec-it test4 sh
 
 
 
