@@ -85,18 +85,19 @@ echo 'CMD ["nginx", "-g", "daemon off;"]' >> Dockerfile
 touch docker-compose.yml
 echo  'version: "3"' > docker-compose.yml
 echo  "services:"  >> docker-compose.yml
-echo  "  test4:"  >> docker-compose.yml
+echo  "  test5:"  >> docker-compose.yml
 echo  "    build:"    >> docker-compose.yml
 echo  "      context: ."  >> docker-compose.yml
 echo  "      dockerfile: Dockerfile"  >> docker-compose.yml
-echo  "    container_name: test3 "  >> docker-compose.yml
+echo  "    container_name: test4 "  >> docker-compose.yml
 echo  "    ports:"  >> docker-compose.yml
 echo  '      - "80:80"'  >> docker-compose.yml
 echo  "    volumes:"  >> docker-compose.yml
 echo  "      - ./:/var/www/html"  >> docker-compose.yml
 
 
-
+docker-compose up -d
+docker exec-it test4 sh
 
 
 
