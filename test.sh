@@ -62,7 +62,7 @@ echo  "      context: ."  >> docker-compose.yml
 echo  "      dockerfile: Dockerfile"  >> docker-compose.yml
 echo  "    container_name: test5 "  >> docker-compose.yml
 echo  "    ports:"  >> docker-compose.yml
-echo  '      - "120:240"'  >> docker-compose.yml
+echo  '      - "240:80"'  >> docker-compose.yml
 echo  "    volumes:"  >> docker-compose.yml
 echo  "      - ./:/var/www/html"  >> docker-compose.yml
 
